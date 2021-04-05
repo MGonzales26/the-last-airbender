@@ -1,10 +1,10 @@
 module ApplicationHelper
     def element_nation
     [
-      ['Air Nomads', 'air_nomads'],
-      ['Earth Kingdom', 'earth_kingdom'],
-      ['Fire Nation', 'fire_nation'],
-      ['Water Tribes', 'water_tribes'],
+      ['Air Nomads', 'Air Nomads'],
+      ['Earth Kingdom', 'Earth Dingdom'],
+      ['Fire Nation', 'Fire Nation'],
+      ['Water Tribes', 'Water Tribes'],
     ]
   end
 end
