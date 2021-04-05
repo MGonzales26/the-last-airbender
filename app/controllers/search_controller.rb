@@ -5,9 +5,10 @@ class SearchController < ApplicationController
     
     response = conn.get('/api/v1/characters') do |f|
       f.params['affiliation'] = params[:nation] 
+      f.params['perPage'] = 200 
     end
 
-    json = JSON.parse(response.body, symbolize_names: true) 
-    # require 'pry'; binding.pry
+    @members = JSON.parse(response.body, symbolize_names: true) 
+    require 'pry'; binding.pry
   end
 end

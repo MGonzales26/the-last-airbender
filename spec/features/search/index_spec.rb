@@ -10,8 +10,9 @@ RSpec.describe "Nation Search Results" do
 
       expect(current_path).to eq(search_path)
 
-      expect(page).to have_content("Number of Members in this Nation: 100")
+      expect(page).to have_content("Number of Members in this Nation: 97")
       #test to show only first 25 results
+      save_and_open_page
       expect(page).to have_content("Name: ")
       expect(page).to have_content("Allies: ")
       expect(page).to have_content("Enemies: ")

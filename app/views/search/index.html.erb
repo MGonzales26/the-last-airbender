@@ -1,3 +1,16 @@
 <h1>Nation's Members</h1>
 
-<h2>Number of Members in this Nation: </h2>
+<h2>Number of Members in this Nation: <%= @members.count %></h2>
+
+
+<% @members.each_with_index do |member, i| %>
+  <div id="member-<%=member[:_id]%>">
+  <p>
+  Name: <%= member[:name] %><br>
+  Allies: <%= member[:allies] %><br>
+  Enemies: <%= member[:enemies] %><br>
+  Enemies: <%= member[:aff] %><br>
+  
+  </p>
+  </div>
+<% end %>
