@@ -5,12 +5,14 @@
 
 <% @members.each_with_index do |member, i| %>
   <div id="member-<%=member[:_id]%>">
-    <p>
-    Name: <%= member[:name] %><br>
-    Allies: <%= member[:allies] || "None" %><br>
-    Enemies: <%= member[:enemies] || "None" %><br>
-    Affiliations: <%= member[:affiliations] || "None" %><br>
-    <div> <img src="<%= member[:photoUrl] %>" alt="picture of <%= member[:name]%>"> </div>
-    </p>
+    <% if i <= 25%>
+      <p>
+      Name: <%= member[:name] %><br>
+      Allies: <%= member[:allies] || "None" %><br>
+      Enemies: <%= member[:enemies] || "None" %><br>
+      Affiliations: <%= member[:affiliations] || "None" %><br>
+      <div> <img src="<%= member[:photoUrl] %>" alt="picture of <%= member[:name]%>"> </div>
+      </p>
+    <% end %>
   </div>
 <% end %>
