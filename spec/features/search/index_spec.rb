@@ -9,13 +9,12 @@ RSpec.describe "Nation Search Results" do
       click_on("Search For Members")
 
       expect(current_path).to eq(search_path)
-save_and_open_page
       expect(page).to have_content("Number of Members in this Nation: 97")
       #test to show only first 25 results
       expect(page).to have_content('Name: Bujing')
       expect(page).to have_content('Allies: ["Ozai"]')
       expect(page).to have_content('Enemies: ["Zuko"]')
-      expect(page).to have_content('Affiliations: None')
+      expect(page).to have_content('Affiliations: Fire Nation military')
     end
   end
 end
